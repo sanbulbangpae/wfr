@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>산불방패 – 고효율 산불지연제</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="산림청 기준을 충족하는 고효율 산불지연제 산불방패. 드론·헬기·지상차량까지 통합 적용 가능한 차세대불 방재 솔루션입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #0b1f33;
+      --color-bg-alt: #f5f7fa;
+      --color-primary: #0f5b4a;
+      --color-accent: #e4572e;
+      --color-text: #1a1a1a;
+      --color-text-light: #f9fafb;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      color: var(--color-text);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* 레이아웃 공통 */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    /* 헤더 & 내비게이션 */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 31, 51, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--color-text-light);
+    }
+
+    .logo-wrap img {
+      height: 36px;
+      width: auto;
+    }
+
+    .logo-text-main {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      opacity: 0.7;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      margin-left: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      color: var(--color-text-light);
+    }
+
+    nav a {
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .nav-cta {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background-color: var(--color-accent);
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--color-text-light);
+      padding: 5px 10px;
+    }
+
+    /* 히어로 섹션 */
+    .hero {
+      background: radial-gradient(circle at top left, #12395b 0, #0b1f33 45%, #06101f 100%);
+      color: var(--color-text-light);
+      padding: 96px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0, transparent 50%),
+        radial-gradient(circle at 80% 0, rgba(228, 87, 46, 0.22) 0, transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      opacity: 0.75;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span.highlight {
+      color: var(--color-accent);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      opacity: 0.9;
+      margin-bottom: 24px;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .metric {
+      border-radius: 10px;
+      padding: 10px 14px;
+      background: rgba(4, 12, 24, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      min-width: 140px;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      opacity: 0.7;
+    }
+
+    .metric-value {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--color-accent);
+      color: #fff;
+      border-color: var(--color-accent);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.03);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-text-light);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-outline:hover {
+      border-color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      background: rgba(3, 9, 18, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--color-text-light);
+      max-width: 360px;
+      margin-left: auto;
+    }
+
+    .hero-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-sub {
+      font-size: 12px;
+      opacity: 0.78;
+      margin-bottom: 12px;
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .hero-chip {
+      font-size: 11px;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 91, 74, 0.6);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-chip-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #3be8b0;
+    }
+
+    /* 제품 섹션 */
+    .section-light {
+      background-color: var(--color-bg-alt);
+    }
+
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 28px;
+    }
+
+    .section-header p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid #e3e7ee;
+      padding: 18px 18px 16px;
+      box-shadow: 0 8px 22px rgba(15, 29, 53, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-kicker {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: #f0f5f4;
+      color: #315045;
+      margin-top: 4px;
+    }
+
+    .card-list {
+      list-style: none;
+      font-size: 13px;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    .card-list li::before {
+      content: "• ";
+      color: var(--color-primary);
+    }
+
+    /* 성능/인증 섹션 */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric-box {
+      border-radius: 12px;
+      border: 1px solid #e3e7ee;
+      padding: 12px 12px 10px;
+      background: #ffffff;
+    }
+
+    .metric-box-label {
+      font-size: 11px;
+      color: #666;
+    }
+
+    .metric-box-value {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 4px;
+      color: var(--color-primary);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    th, td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #e3e7ee;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f3f8;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    /* ESG 섹션 */
+    .esg-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: #e3f2ed;
+      color: #285545;
+    }
+
+    .esg-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    /* 문의 섹션 - 좁은 컨테이너 */
+    .contact-short {
+      padding-bottom: 32px;
+    }
+
+    .contact-short h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .contact-short p {
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .contact-short .info {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .contact-short .info strong {
+      color: var(--color-primary);
+    }
+
+    /* 푸터 */
+    footer {
+      background: #050b12;
+      color: rgba(255, 255, 255, 0.72);
+      padding: 20px 0;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      opacity: 0.8;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+
+    /* 반응형 */
+    @media (max-width: 960px) {
+      .hero-inner,
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-inner {
+        gap: 28px;
+      }
+
+      .hero-card {
+        margin: 0;
+      }
+
+      .cards-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .metric-grid,
+      .esg-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+/* 반응형 (모바일) */
+@media (max-width: 720px) {
+  .header-inner {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .logo-wrap {
+    flex: 1 1 auto;
+  }
+
+  .nav-container {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(11, 31, 51, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+    display: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: nowrap; /* 텍스트 줄바꿈 없이 한 줄 */
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    padding: 0;
+  }
+
+  nav ul::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  nav li {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    border-radius: 12px;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .menu-icon {
+    display: block;
+    position: static;
+    margin: 0;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--color-text-light);
+    padding: 5px 10px;
+  }
+
+  /* 헤더 아래 여백 제거 (행 간격 없음) */
+  header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hero {
+    padding: 80px 0 60px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .cards-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .form-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="assets/images/logo-sb.png" alt="산불방패 로고" />
+        <div>
+          <div class="logo-text-main">산불방패</div>
+          <div class="logo-text-sub">고효율 산불지연제 · Wildfire Retardant</div>
+        </div>
+      </div>
+      <div class="nav-container">
+        <span class="menu-icon">☰</span>
+        <nav>
+          <ul>
+            <li><a href="#intro">소개</a></li>
+            <li><a href="#product">제품</a></li>
+            <li><a href="#technology">기술</a></li>
+            <li><a href="#performance">성능·인증</a></li>
+            <li><a href="#esg">ESG</a></li>
+            <li><a href="#contact" class="nav-cta">자료·문의</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- 히어로 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">Wildfire Retardant Solution</div>
+        <h1 class="hero-title">
+          산불 확산을 늦추고 숲을 지키는<br />
+          고효율 산불지연제 <span class="highlight">산불방패</span>
+        </h1>
+        <p class="hero-sub">
+          산림청 기준을 충족하는 비독성·고효율 지연제로,<br />
+          드론·헬기·지상 차량까지 통합 적용 가능한 차세대 산불 방재 솔루션입니다.
+        </p>
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-label">지연시간</div>
+            <div class="metric-value">8–12시간 이상</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">생분해율</div>
+            <div class="metric-value">92% / 90일</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">적용 방식</div>
+            <div class="metric-value">드론 · 헬기 · 지상차량</div>
+          </div>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#contact" class="btn btn-primary">정부·지자체용 제안서 요청</a>
+          <a href="#performance" class="btn btn-outline">성능·인증 보기</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-title">실시간 산불 대응 시나리오</div>
+          <div class="hero-card-sub">
+            드론·헬기를 이용해 산불 초기 확산을 8–12시간 지연시키고,
+            진화 인력이 도착할 시간을 확보합니다.
+          </div>
+          <div class="hero-card-grid">
+            <div>
+              <strong>탐지</strong><br />
+              AI·드론 기반 10분 이내 조기 감지
+            </div>
+            <div>
+              <strong>지연</strong><br />
+              산불방패 살포로 확산 속도 제어
+            </div>
+            <div>
+              <strong>복원</strong><br />
+              산림 피해 최소화 및 탄소 저감
+            </div>
+            <div>
+              <strong>데이터</strong><br />
+              성능 데이터를 기반으로 지속 개선
+            </div>
+          </div>
+          <div class="hero-chip">
+            <span class="hero-chip-dot"></span>
+            산림청 기준 기반 · ESG 친화 포뮬라
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 소개 섹션 -->
+  <section id="intro" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>산불지연제란?</h2>
+        <p>
+          산불지연제는 산불 확산 속도를 늦추고, 진화 인력과 장비가 도착할 충분한 시간을 확보하는 데 사용되는 화학 물질입니다.
+          불에 잘 타는 식생에 도포되어 불꽃 확산을 억제하며, 최우선 목표는 인명과 재산, 생태계 피해를 최소화하는 것입니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 제품 섹션 -->
+  <section id="product" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>산불방패 제품 라인업</h2>
+        <p>
+          다양한 운용 환경에 맞춰 항공·지상·사전 도포용으로 최적화된
+          산불지연제 포뮬라를 제공합니다.
+        </p>
+      </div>
+      <div class="cards-row">
+        <article class="card">
+          <div class="card-kicker">Aerial</div>
+          <h3>산불방패 Aerial</h3>
+          <img src="assets/images/product-aerial.jpg" alt="산불방패 Aerial 이미지"
+                 style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin: 8px 0;" />
+          <span class="pill">헬기 · 대형 드론용</span>
+          <ul class="card-list">
+            <li>대용량 살포에 적합한 고점도 포뮬라</li>
+            <li>기존 탱크·노즐 시스템과 호환 가능</li>
+            <li>넓은 면적(수십 ha) 신속 커버</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-kicker">Ground</div>
+          <h3>산불방패 Ground</h3>
+          <img src="assets/images/product-ground.jpg" alt="산불방패 Ground 이미지"
+                 style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin: 8px 0;" />
+          <span class="pill">소방차 · 관수차용</span>
+          <ul class="card-list">
+            <li>지상 차량·소방 장비에 최적화된 점도</li>
+            <li>임도·마을 인접 지역 집중 방어</li>
+            <li>물 대비 장기적인 방어 라인 형성</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-kicker">Perimeter</div>
+          <h3>산불방패 Perimeter</h3>
+          <img src="assets/images/product-perimeter.jpg" alt="산불방패 Perimeter 이미지"
+                 style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin: 8px 0;" />
+          <span class="pill">사전 도포 · 장기 보호</span>
+          <ul class="card-list">
+            <li>산책로·임도·취약 구간 사전 도포용</li>
+            <li>강우 후에도 일정 수준 효과 유지</li>
+            <li>장기 모니터링 데이터 기반 개선</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 기술 섹션 -->
+  <section id="technology">
+    <div class="container">
+      <div class="section-header">
+        <h2>고효율 포뮬라와 적용 기술</h2>
+        <p>
+          DCP 기반 난연제와 APP, 천연 증점제를 조합하여 산림 생태계에 대한
+          영향을 최소화하면서도 장시간 산불 확산을 늦추도록 설계되었습니다.
+        </p>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>포뮬라(Formulation)</h3>
+          <p>
+            DCP No Flame, APP, 천연 증점제의 조합을 통해 강력한 난연 성능과
+            우수한 생분해성을 동시에 확보합니다.
+          </p>
+          <p>
+            비독성 및 수생 생태계 영향 최소화를 목표로, 국내·해외 환경 규제에
+            대응할 수 있도록 설계되었습니다.
+          </p>
+          <h3 style="margin-top:20px;">제조·공정(Manufacturing)</h3>
+          <p>
+            국내 생산을 통해 안정적인 공급과 엄격한 품질 관리를 수행하며,
+            점도·입도 등 핵심 파라미터를 일관되게 관리합니다.
+          </p>
+        </div>
+        <div>
+          <h3>적용 기술(Deployment)</h3>
+          <p>
+            드론, 헬기, 지상 차량 등 다양한 플랫폼에 적용할 수 있도록 점도와
+            분사 특성을 최적화했습니다.
+          </p>
+          <p>
+            기존 방재 장비·노즐과의 호환성을 고려하여 도입 장벽을 낮추고,
+            빠른 현장 적용이 가능하도록 설계합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 성능·인증 섹션 -->
+  <section id="performance" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>검증된 성능과 공인 인증</h2>
+        <p>
+          산림청 기준을 충족하는 성능과 생분해성, 독성 평가를 기반으로 공공
+          산불 방재 사업에 적합한 품질을 제공합니다.
+        </p>
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="metric-grid">
+            <div class="metric-box">
+              <div class="metric-box-label">지연시간</div>
+              <div class="metric-box-value">8–12시간 이상</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-box-label">생분해율</div>
+              <div class="metric-box-value">92% / 90일</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-box-label">독성 등급</div>
+              <div class="metric-box-value">수생 LD50 &gt; 5,000 mg/L</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-box-label">점도</div>
+              <div class="metric-box-value">약 350 cP</div>
+            </div>
+          </div>
+          <p style="font-size:12px; color:#777; margin-top:10px;">
+            * 구체적인 시험 결과 및 인증 현황은 공식 TDS/MSDS 및 시험성적서를 통해 제공합니다.
+          </p>
+        </div>
+        <div>
+          <h3>주요 성능 비교 (요약)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th>산불방패</th>
+                <th>일반 지연제</th>
+                <th>해외 제품 계열*</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>지연시간</td>
+                <td>8–12h</td>
+                <td>4–6h</td>
+                <td>6–8h</td>
+              </tr>
+              <tr>
+                <td>생분해율</td>
+                <td>92%</td>
+                <td>70–80%</td>
+                <td>70–80%</td>
+              </tr>
+              <tr>
+                <td>적용 방식</td>
+                <td>드론·헬기·지상 겸용</td>
+                <td>주로 항공</td>
+                <td>주로 항공</td>
+              </tr>
+              <tr>
+                <td>국내 생산</td>
+                <td>Yes</td>
+                <td>일부</td>
+                <td>No</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:11px; color:#777; margin-top:6px;">
+            * 해외 제품 데이터는 공개 자료를 기반으로 한 범위값이며, 상세 비교는 별도 자료로 제공합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESG 섹션 -->
+  <section id="esg" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>ESG & 지속가능성</h2>
+        <p>
+          산불방패는 산불 피해 저감뿐 아니라, 산림·수생 생태계 보호와
+          탄소중립 목표 달성에 기여하는 ESG 지향 솔루션입니다.
+        </p>
+      </div>
+      <div class="esg-tags">
+        <span class="tag">Environment · 환경</span>
+        <span class="tag">Social · 사회</span>
+        <span class="tag">Governance · 거버넌스</span>
+      </div>
+      <div class="esg-grid">
+        <div>
+          <h3>Environment</h3>
+          <p>
+            비독성 및 고생분해 포뮬라를 통해 토양·수생 생태계에 대한 영향을
+            최소화하고, 장기 축적을 방지합니다.
+          </p>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <p>
+            산불로 인한 인명·재산 피해와 지역사회 경제 손실을 줄이는 데
+            기여하며, 산촌·마을·관광 자원을 보호합니다.
+          </p>
+        </div>
+        <div>
+          <h3>Governance</h3>
+          <p>
+            산림청 등 관련 규정과 기준을 준수하며, 시험 데이터·성과를
+            투명하게 공개하여 공공 사업 파트너와 신뢰를 구축합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 섹션 -->
+  <section id="contact" class="contact-short">
+    <div class="container">
+      <div class="section-header">
+        <h2>자료 요청 및 기술 문의</h2>
+        <p>
+          산불지연제 도입, 파일럿 프로젝트, 공동 연구·사업 제안 등
+          협업이 필요하신 경우 아래 정보로 문의해 주세요.
+        </p>
+      </div>
+      <div class="info">
+        이메일: <strong>info@sanbulshield.com</strong><br />
+        전화: <strong>02-000-0000</strong><br />
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © 2026 산불방패 · Wildfire Retardant. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+        <a href="#esg">ESG 정책</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+document.querySelector('.menu-icon').addEventListener('click', function () {
+  document.querySelector('nav').classList.toggle('active');
+});
+
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const headerOffset = 128;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = window.pageYOffset + elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      document.querySelector('nav').classList.remove('active');
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
